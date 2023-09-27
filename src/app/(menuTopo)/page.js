@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Btn from "../../components/Botoes/btn";
-import Container from "../../components/containers/container";
-import BoxDescricao from "../../components/containers/boxDescricoes";
+import Btn from "@/components/Botoes/btn";
+import Container from "@/components/containers/container";
+import BoxDescricao from "@/components/containers/boxDescricoes";
 export default function PaginaHome({ imageLoader }) {
     return (
         <main className="relative top-0 left-0">
@@ -104,6 +104,21 @@ export default function PaginaHome({ imageLoader }) {
                             <h1 className="text-5xl font-bold">+7mil</h1>
                             <h2 className="text-lg font-medium">EXERCICIOS</h2>
                         </div>
+                    </div>
+                </Container>
+            </section>
+            <section className="relative w-full mt-40 bg-gray-200 ">
+                <Container configuracao={'justify-center lg:justify-end 2xl:justify-between flex gap-12 items-center flex-wrap py-10'}>
+                    <div className='w-full flex gap-5 lg:flex-nowrap flex-wrap'>
+                        <div className='w-full lg:w-1/2'>
+                            <h1 className="font-black text-4xl">VOCÊ ESTÁ NO LUGAR CERTO PARA APRENDER! !</h1>
+                            <h2 className="font-medium text-lg mt-10">Na plataforma EDUKE acreditamos que o melhor jeito de aprender alguma coisa é praticando e treinando. Com isso, oferecemos alguns serviços que são de extrema importância para complementar os seus estudos.</h2>
+                        </div>
+                        <BoxDescricao btnltexto={'COMEÇAR'} style="w-full lg:w-1/2 bg-white px-12 py-10" title="PLANO DE ESTUDO" img="/icones/booknotsmoke.png" text="Faremos um plano de estudo totalmente personalizado para você, baseado em suas dificuldades, para assim, poder estudar aquilo que você realmente precisa" />
+                    </div>
+                    <div className='w-full flex gap-5 lg:flex-nowrap flex-wrap'>
+                        <BoxDescricao btnltexto={'COMEÇAR'} style="w-full lg:w-1/2 bg-white px-12 py-10" img="/icones/booknotsmoke.png" text="Em nossa plataforma temos diversos tipos de simulados, com eles é possivel adquirir técnicas, para assim, poder resolver com mais facilidades os desafios propostos pelos vestibulares" title="SIMULADOS" />
+                        <BoxDescricao btnltexto={'COMEÇAR'} style="w-full lg:w-1/2 bg-white px-12 py-10" img="/icones/booknotsmoke.png" text="Aqui você encotra os mais variados tipos de exercícios, podendo ser de vestibulares ou até mesmo feito por nossos especialistas. Os exercícios colocam em prática tudo aquilo que você aprendeu" title="EXERCÍCIOS" />
                     </div>
                 </Container>
             </section>
