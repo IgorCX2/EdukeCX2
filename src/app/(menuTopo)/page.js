@@ -2,13 +2,25 @@ import Image from "next/image";
 import Btn from "@/components/Botoes/btn";
 import Container from "@/components/containers/container";
 import BoxDescricao from "@/components/containers/boxDescricoes";
-export default function PaginaHome({ imageLoader }) {
+async function getFrase(dia){
+    try{
+        const frase = await fetch(`http://154.56.60.90:8080/api/meuip/meu-ips`, {
+            method: 'GET',
+        });
+        return frase.json()
+    }catch(error) {
+        return error
+    }
+}
+export default async function PaginaHome({ imageLoader }) {
+    const teste = await getFrase()
+    console.log(teste)
     return (
         <main className="relative top-0 left-0">
             <section className="relative w-screen h-screen flex justify-center">
                 <div className="absolute w-full h-full left-0 flex justify-center z-10 bg-gradient-to-b from-black/30 from-10% to-black/25 to-20% backdrop-blur-[1px]">
                     <div className="flex flex-col items-center max-w-4xl w-full justify-center gap-8 text-center text-white p-10 md:p-5 lg:p-0">
-                        <h1 className="font-black text-5xl md:text-6xl">VOCÊ ESTÁ NO LUGAR CERTO PARA APRENDER! [BETA]</h1>
+                        <h1 className="font-black text-5xl md:text-6xl">{teste.ip}VOCÊ ESTÁ NO LUGAR CERTO PARA APRENDER! [BETA]</h1>
                         <h2 className="font-medium text-lg">A nossa plataforma de estudos identifica os pontos fortes e fracos de cada pessoa, traçando um plano de estudos personalizado e eficiente para alcançar o seu sucesso. Junte-se a nós e maximize seu potencial!</h2>
                         <div className="flex gap-12 mt-2">
                             <Btn link='https://www.youtube.com/' configuracao={'border-2'}>Tutorial</Btn>

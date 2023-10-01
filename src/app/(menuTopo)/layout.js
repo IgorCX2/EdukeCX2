@@ -1,11 +1,12 @@
 import MenuTopo from "@/components/elementosPrincipais/menuTopo";
 import Rodape from "@/components/elementosPrincipais/rodape";
 
-export default function LayoutMenuTopo({children}){
+export default function LayoutMenuTopo(props){
     return(
         <body className="overflow-x-hidden">
             <MenuTopo/>
-            {children}
+                {props.children}
+                {props.modal}
             <Rodape/>
         </body>
     )
