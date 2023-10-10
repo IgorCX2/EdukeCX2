@@ -5,8 +5,8 @@ export default function LayoutMenuTopo(props){
     return(
         <body className="overflow-x-hidden">
             <MenuTopo/>
-                {props.children}
-                {props.modal}
+            {props.modal}
+            {props.children}
             <Rodape/>
         </body>
     )
