@@ -6,7 +6,7 @@ import Link from "next/link";
 import FormContaVerificar from "./verificar";
 import { useRouter } from 'next/navigation'
 import { cookieAction } from "src/app/action";
-import TelaCarregando from "src/contexts/carregando/telacarregando";
+import TelaCarregando from "@/components/carregando/telacarregando";
 async function postEntrar(formCadastro) {
     try {
         const apiEntrar = await fetch('http://localhost:8080/api/contaRegistro/entrar', {
@@ -39,8 +39,6 @@ export default function FormContaEntrar({modal}) {
         if (formDados.email) {
             if (formDados.senha.length >= 6) {
                 const responseEnv = await postEntrar(formDados)
-                console.log(responseEnv)
-                console.log(responseEnv.status)
                 if (responseEnv.status == 200) {
                     const cadCookie = await cookieAction('cadastrar', 'UserToken', responseEnv.token, 60*100)
                     return router.push('/aprender')

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import InputFunction from "../inputForms";
 import Btn from "@/components/Botoes/btn";
-import TelaCarregando from "src/contexts/carregando/telacarregando";
+import TelaCarregando from "@/components/carregando/telacarregando";
 
 async function ValidarEmail(formCadastro) {
     try {

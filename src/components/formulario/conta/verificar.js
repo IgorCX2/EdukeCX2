@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { cookieAction } from 'src/app/action';
-import TelaCarregando from "src/contexts/carregando/telacarregando";
+import TelaCarregando from "@/components/carregando/telacarregando";
 async function postValidarLogin(formValidar, id) {
     try {
         const apiValidarLogin = await fetch('http://localhost:8080/api/contaRegistro/validar', {

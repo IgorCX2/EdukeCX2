@@ -3,7 +3,7 @@ import { useState } from "react";
 import InputFunction from "../inputForms";
 import Btn from "@/components/Botoes/btn";
 import Link from "next/link";
-import TelaCarregando from "src/contexts/carregando/telacarregando";
+import TelaCarregando from "@/components/carregando/telacarregando";
 import { useRouter } from 'next/navigation'
 async function postCadastro(formCadastro){
     try{

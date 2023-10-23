@@ -21,9 +21,18 @@
   },
   "homepage": "https://github.com/IgorCX2/EdukeCX2#readme",
   "dependencies": {
+    "jsonwebtoken": "^9.0.2",
     "next": "^13.5.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "rehype-stringify": "^10.0.0",
+    "remark": "^15.0.1",
+    "remark-breaks": "^4.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-html": "^16.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.0.0",
+    "supports-color": "^8.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",

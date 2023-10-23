@@ -1,0 +1,43 @@
+.markdown {
+  @apply leading-relaxed;
+}
+
+.markdown h1 {
+  @apply text-7xl mb-16 leading-snug font-black;
+}
+
+.markdown img{
+  @apply mt-10 mb-10;
+}
+
+.markdown h2 {
+  @apply text-3xl mt-7 mb-2 leading-snug text-left;
+}
+
+.markdown h3 {
+  @apply text-xl mb-2 leading-snug text-left;
+}
+
+.markdown p {
+  @apply  mb-4 leading-snug text-left;
+}
+
+.markdown strong {
+  @apply text-lg leading-snug text-center;
+}
+
+.markdown em {
+  @apply leading-snug mt-5 text-right text-sm;
+}
+
+.markdown table {
+  @apply border-collapse border-spacing-0 mt-2;
+}
+
+.markdown ul {
+  @apply leading-snug ml-10 mb-2 text-left list-none;
+}
+
+.markdown th,.markdown td {
+  @apply p-2 border-solid border border-gray-200;
+}
