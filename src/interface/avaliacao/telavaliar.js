@@ -16,8 +16,8 @@ export default function BoasVindasAvaliacao({nome, imageLoader}){
         setTemporizador(true)
     }
     return(
-        <div className="absolute z-20 top-0 left-0 w-screen h-full bg-white flex flex-col items-center">
-            <main className="mt-10 w-9/12 flex flex-col justify-center items-center">
+        <div className="absolute z-50 top-0 left-0 w-screen h-full bg-white flex flex-col items-center">
+            <div className="mt-10 w-9/12 flex flex-col bg-white justify-center items-center">
                 <section className="w-8/12">
                     <h1 className="text-center text-7xl font-extrabold">Boa Prova, {nome}!</h1>
                     <h2 className="text-center text-xl mt-8">Você irá dar início a uma avaliação {paramsLink}.</h2>
@@ -45,7 +45,7 @@ export default function BoasVindasAvaliacao({nome, imageLoader}){
                 </section>
                 <button className= "rounded-lg bg-blue-500 text-white p-2 drop-shadow-n2xl font-bold py-2.5 px-4" onClick={fecharAbertura}>Iniciar Avaliação</button>
                 <p className="text-center mt-2 font-medium text-gray-400 mb-10 max-w-md">Ao clicar no botão acima, você estará dando início à avaliação. Caso feche a aba antes de finalizar a prova, você irá perder o seu progresso e terá que voltar ao início.</p>
-            </main>
+            </div>
         </div>
     )
 }

@@ -36,7 +36,7 @@ export default function SelecionarNivel({id}){
     const SendNivel = async e => {
         e.preventDefault()
         const responseEnv = await cadastrarNivel(id,nivel)
-        if(responseEnv.status == 0){
+        if(responseEnv.status == 200){
             router.push(`/avaliacao/diagnostica`);
         }
     }

@@ -13,11 +13,15 @@ export const TratarQuestao = ({children}) => {
         respostasHistorico: [],
         dificuldade: [],
         historicoPosicao: [],
+        DificuldadesEncointradas: [],
+        nivelAntigo: [],
+        nivelNovo: [],
+        materiaAvaliada: [],
     })
     const addContador = async (response) => {
         console.log(response)
-        if(response.Validar == "N"){
-            setHistorico({...historico, Validar: response.Validar, historicomateria: response.materiaLocal, conteudoLocal: response.conteudoLocal, respostasHistorico: response.historico, dificuldade:response.dificuldade, historicoPosicao: response.historicoPosicao})
+        if(response.Validar == "N" || response.Validar == "S"){
+            setHistorico({...historico,materiaAvaliada: response.materiaAvaliada, DificuldadesEncointradas: response.DificuldadesEncointradas,nivelAntigo: response.nivelAntigo,nivelNovo: response.nivelNovo, Validar: response.Validar, historicomateria: response.materiaLocal, conteudoLocal: response.conteudoLocal, respostasHistorico: response.historico, dificuldade:response.dificuldade, historicoPosicao: response.historicoPosicao})
         }else{
             setHistorico({...historico})
         }

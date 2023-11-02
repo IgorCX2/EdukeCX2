@@ -32,15 +32,13 @@ function Perguntas({ ResposeAlternativas, dados, infos, id }) {
     }, [temporizador]);
     var contAlternativas = -1
     const alternativas = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
-    const handleRadioChange = (event) => {
-        setResposta(event.target.value);
-    };
     const SendEnviarQuestao = async e => {
         e.preventDefault()
         if(resposta){
             const bucarAnaliseQuestao = await AnalisarQuestao(dados, infos, id, resposta, 0)
             addContador(bucarAnaliseQuestao)
             setSegundos(0)
+            setResposta('')
         }else{
             setResponse('Você deve assinalar alguma alternativa!')
         }
@@ -48,7 +46,7 @@ function Perguntas({ ResposeAlternativas, dados, infos, id }) {
     return (
         <div className="w-full flex flex-col gap-2">
             {resposta}
-            <form className={`flex w-full flex-nowrap justify-between py-10 mt-5`} onSubmit={SendEnviarQuestao}>
+            <form className={`flex w-full md:flex-nowrap flex-wrap justify-between py-10 mt-5`} onSubmit={SendEnviarQuestao}>
                 <div className=' flex flex-col gap-5 text-lg'>
                     {ResposeAlternativas.split('¬').map((alternativa) => {
                         contAlternativas++
@@ -56,16 +54,15 @@ function Perguntas({ ResposeAlternativas, dados, infos, id }) {
                         const dividiAlternativa = alternativa.split('|')
                         if (dividiAlternativa.length == 2) {
                             return(
-                                <div className={`flex ${resposta == trafromAlternativas+"|"+dividiAlternativa[1] && 'font-medium'} hover:scale-105`} key={alternativas[trafromAlternativas]}>
-                                    <input type="radio" className="appearance-none" id={alternativas[trafromAlternativas]} name="alternativas" value={trafromAlternativas+"|"+dividiAlternativa[1]} onChange={handleRadioChange}/>
-                                    <label htmlFor={alternativas[trafromAlternativas]} ><strong>{alternativas[trafromAlternativas]})</strong>{dividiAlternativa[0]}{segundo}</label>
-                                </div>
+                            <div onClick={() => setResposta(`${trafromAlternativas}|${dividiAlternativa[1]}`)}  key={alternativas[trafromAlternativas]} className={`flex ${resposta == trafromAlternativas+"|"+dividiAlternativa[1] && 'font-medium'} hover:scale-105`}>
+                                <p><strong>{alternativas[trafromAlternativas]})</strong>{dividiAlternativa[0]}{segundo}</p>
+                            </div>
                             )
                         }
                     })}
                 </div>
-                <div className='flex flex-col justify-between gap-5 ml-4'>
-                    <button className='rounded-lg bg-blue-500 text-white p-2 font-bold h-full'>Responder</button>
+                <div className='flex flex-col justify-between gap-5 md:ml-4 ml-0 md:w-auto w-full md:mt-0 mt-8'>
+                    <button className='rounded-lg bg-blue-500 text-white p-2 font-bold h-full md:w-auto w-full'>Responder</button>
                 </div> 
             </form>
             {response}

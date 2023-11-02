@@ -1,6 +1,5 @@
 import Image from 'next/image';
 export default function MenuAprender({imageLoader}) {
-    console.log('ola')
     return (
         <aside className='lg:flex hidden w-3/12 flex gap-12 flex-col'>
             <div className='w-full flex flex-col gap-5'>

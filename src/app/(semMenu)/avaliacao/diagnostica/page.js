@@ -20,5 +20,5 @@ export default async function Diagnostica(){
     var decode = await promisify(jwt.verify)(pegarCookieLogin.value, "OD2DS8S21DSA4SD4SS3A");
     const questaoData = await getDiagnostico(decode.id);
     console.log(questaoData)
-    return <PaginaDiagnostica infos={questaoData} id={decode.id}/>
+    return <PaginaDiagnostica infos={questaoData} id={decode.id} nome={decode.nome}/>
 }

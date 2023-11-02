@@ -41,7 +41,6 @@ export default function MenuLateral({nome, skin, id}){
                                 <Link href={`/perfil/${id}`}>
                                     <h1 className='text-3xl font-bold'>{nome}</h1>
                                 </Link>
-                                <Xp id={id}/>
                             </Suspense>
                         </div>
                     </div>
