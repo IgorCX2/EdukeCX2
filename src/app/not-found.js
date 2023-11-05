@@ -6,7 +6,7 @@ export default function NotFound(){
             <div className='absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-bluelight to-blue-500 '></div>
             <div>
                 <Image
-                    src="/icones/portal.png"
+                    src="https://imgs.aprendacomeduke.com.br/icones/portal.png"
                     alt="ilha flutuante"
                     placeholder ='blur'
                     blurDataURL={"data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="}

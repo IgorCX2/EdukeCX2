@@ -13,7 +13,7 @@ async function postPlano(id,tipo){
         return error
     }
 }
-export default async function BuscarPlano({descricao, posicao, imageLoader}){
+export default async function BuscarPlano({descricao, posicao}){
     const descricaoSepara = descricao.split('|')[0]
     var pegarPlano
     if(descricaoSepara[0] == 'R' || descricaoSepara[0] == 'E'){
@@ -28,8 +28,7 @@ export default async function BuscarPlano({descricao, posicao, imageLoader}){
             <div className={`${posicao != 0 ? "grayscale-[80%]" : ""} flex relative`}>
                 <div className="z-20 saturate-150">
                     <Image
-                        loader={imageLoader}
-                        src={`/ilhas/materias/${materiasEscolares[pegarPlano.meuPlano[0].materia].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()}.png`}
+                        src={`https://imgs.aprendacomeduke.com.br/ilhas/materias/${materiasEscolares[pegarPlano.meuPlano[0].materia].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()}.png`}
                         alt="ilha de estudo"
                         priority={true}
                         width={190}

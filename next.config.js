@@ -1,8 +1,11 @@
 module.exports = {
   images: {
-    domains: ['aprendacomeduke.com.br'],
-    loader: 'default',
-    path: 'http://aprendacomeduke.com.br:3000/_next/image',
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'imgs.aprendacomeduke.com.br',
+      },
+    ],
   },
   experimental: {
     serverActions: true,

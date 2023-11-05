@@ -7,7 +7,7 @@ export default function TelaCarregando(){
             <div className='relative'>
                 <div>
                     <Image
-                        src="/carregando/ilhascarregamento.svg"
+                        src="https://imgs.aprendacomeduke.com.br/carregando/ilhascarregamento.svg"
                         alt="ilha flutuante"
                         placeholder ='blur'
                         blurDataURL={"data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="}
@@ -18,7 +18,7 @@ export default function TelaCarregando(){
                 <div className='absolute bottom-24 left-14'>
                     <div className='animate-bounce'>
                         <Image
-                            src="/carregando/skin.png"
+                            src="https://imgs.aprendacomeduke.com.br/carregando/skin.png"
                             alt="mascote do site"
                             placeholder ='blur'
                             blurDataURL={"data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="}

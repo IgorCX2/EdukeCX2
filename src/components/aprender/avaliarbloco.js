@@ -6,7 +6,7 @@ export default function AvaliarBloco({tipo, ativo}){
             <div className="flex relative">
                 <div className="z-20 -mt-10">
                     <Image
-                        src={"/personagens/bosscompleto.png"}
+                        src={"https://imgs.aprendacomeduke.com.br/personagens/bosscompleto.png"}
                         alt="chefão do mundo estudo"
                         priority={true}
                         width={160}

@@ -28,7 +28,7 @@ export default async function FraseMotivacional({data, id}){
             </div>
             <div className='sm:flex hidden relative'>
                 <Image
-                    src={"/personagens/user.png"}
+                    src={"https://imgs.aprendacomeduke.com.br/personagens/user.png"}
                     alt="imagem do seu personagem"
                     priority={true}
                     width={170}

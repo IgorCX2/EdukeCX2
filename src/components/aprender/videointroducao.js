@@ -18,7 +18,7 @@ export default function VideoIntroducao({nome, id}){
   const [fechar, setFechar] = useState(false);
   const [audioBoasVindas, setAudioBoasVindas] = useState(null);
   const createAudioInstance = () => {
-    const audio = new Audio('/audio/boasvindas.mp3');
+    const audio = new Audio('https://imgs.aprendacomeduke.com.br/audio/boasvindas.mp3');
     audio.addEventListener('ended', handleAudioEnded);
     return audio;
   };

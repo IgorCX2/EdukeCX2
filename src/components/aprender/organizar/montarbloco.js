@@ -5,7 +5,7 @@ export default function MontarBlocoPlano({ descricao}) {
         <div className='flex gap-5'>
             <div className='-mt-14'>
                 <Image
-                    src={`/ilhas/materias/${materiasEscolares[descricao.materia].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()}.png`}
+                    src={`https://imgs.aprendacomeduke.com.br/ilhas/materias/${materiasEscolares[descricao.materia].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()}.png`}
                     alt="ilha de estudo"
                     priority={true}
                     width={140}

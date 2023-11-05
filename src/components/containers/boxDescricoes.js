@@ -6,7 +6,7 @@ export default function BoxDescricao({title, text, img, style, btnlink, btnltext
             <div className={`${type ? 'items-center' : undefined} flex flex-col gap-2`}>
                 <div>
                     <Image
-                        src={`${img}`}
+                        src={`https://imgs.aprendacomeduke.com.br${img}`}
                         alt={`logo do produto ${title}`}
                         width={type ? 80 : 40}
                         height={type ? 80 : 50}

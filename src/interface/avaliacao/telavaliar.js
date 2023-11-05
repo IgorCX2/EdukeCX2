@@ -33,7 +33,7 @@ export default function BoasVindasAvaliacao({nome}){
                     <div className="flex justify-center w-full my-20">
                         <div className="bg-blue-500/10 py-10 px-5 rounded-full">
                             <Image
-                            src={"/personagens/user.png"}
+                            src={"https://imgs.aprendacomeduke.com.br/personagens/user.png"}
                             alt="imagem do seu personagem"
                             priority={true}
                             width={170}

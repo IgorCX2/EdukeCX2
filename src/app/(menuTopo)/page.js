@@ -18,7 +18,7 @@ export default function PaginaHome({ context }) {
                 </div>
                 <div>
                     <Image
-                        src={"/telaInicial/slidemain.png"}
+                        src={"https://imgs.aprendacomeduke.com.br/telaInicial/slidemain.png"}
                         alt="slide inicial do site"
                         priority
                         placeholder="blur"
@@ -39,7 +39,7 @@ export default function PaginaHome({ context }) {
                     </div>
                     <div>
                         <Image
-                            src="/ilhas/ilhas.png"
+                            src="https://imgs.aprendacomeduke.com.br/ilhas/ilhas.png"
                             alt="desenho de ilhas voadoras"
                             width={380}
                             height={380}
@@ -59,7 +59,7 @@ export default function PaginaHome({ context }) {
                     </div>
                     <div>
                         <Image
-                            src="/telaInicial/pix.jpeg"
+                            src="https://imgs.aprendacomeduke.com.br/telaInicial/pix.jpeg"
                             alt="QrCode do pix"
                             width={180}
                             height={180}

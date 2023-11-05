@@ -14,7 +14,7 @@ export default function NavegarEstudo({ paginas, titulo, id, }) {
                     <Link key={titulo[contarPaginas]?.toString()} href={"#" + titulo[contarPaginas]?.toString()}>
                         <div className={`flex gap-5 items-center border-b-2 py-6 ${tipo > 2 && 'px-6'}`}>
                             <div>
-                                <Image src="/icones/booknotsmoke.png" alt="Picture of the author" width={40} height={40}/>
+                                <Image src="https://imgs.aprendacomeduke.com.br/icones/booknotsmoke.png" alt="Picture of the author" width={40} height={40}/>
                             </div>
                             <div className="flex flex-col">
                                 <strong className='text-xl'>{titulo[contarPaginas]}</strong>

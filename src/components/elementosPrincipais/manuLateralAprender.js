@@ -5,7 +5,7 @@ export default function MenuAprender() {
             <div className='w-full flex flex-col gap-5'>
                 <div className="w-full rounded-lg py-10 px-3 xl:px-7 bg-[#191022] relative flex flex-col justify-center items-center text-white">
                     <Image
-                        src={"/logos/logovip.png"}
+                        src={"https://imgs.aprendacomeduke.com.br/logos/logovip.png"}
                         alt="logo de vip"
                         width={100}
                         height={100}
@@ -23,8 +23,7 @@ export default function MenuAprender() {
             </div>
             <div className="w-full rounded-lg py-10 px-7 bg-red-600 relative flex flex-col justify-center items-center text-white">
                 <Image
-                    loader={imageLoader}
-                    src={"/logos/logoyoutube.png"}
+                    src={"https://imgs.aprendacomeduke.com.br/logos/logoyoutube.png"}
                     alt="logo de vip"
                     width={100}
                     height={100}

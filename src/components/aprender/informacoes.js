@@ -6,7 +6,7 @@ async function CardsStatus({situacao}){
     return(
         <div className="w-full h-40 lg:h-60 rounded-lg border-2 py-3.5 relative flex flex-col justify-center items-center text-center">
             <Image
-                src={`/icones/${imagemCard[situacao]}`}
+                src={`https://imgs.aprendacomeduke.com.br/icones/${imagemCard[situacao]}`}
                 alt={tituloCard[situacao]}
                 width={75}
                 height={75}	
@@ -29,7 +29,7 @@ async function MissaoDiaria({dia}){
                     <div className='bg-blue-500 py-1 text-white rounded-lg flex items-center justify-center gap-5'>
                         <p>100 moedas</p>
                         <Image
-                            src={`/icones/coin.png`}
+                            src={`https://imgs.aprendacomeduke.com.br/icones/coin.png`}
                             alt={'logo das moedas'}
                             width={20}
                             height={20}	
@@ -44,7 +44,7 @@ async function MissaoDiaria({dia}){
         </div>
     )
 }
-export default function Infomacoes({imageLoader, dia}){
+export default function Infomacoes({dia}){
     return(
         <section className='w-full lg:flex-row flex-col flex gap-10 justify-between'>
             <div className="w-full flex flex-col gap-7">
