@@ -3,7 +3,7 @@ import { useState,useEffect, memo } from "react"
 import { usarConteudoQuestao } from "src/contexts/questaoDiagnostica";
 async function AnalisarQuestao(dados, config, id, resposta, segundos) {
     try {
-        const analisarquestao = await fetch(`http://localhost:8080/api/analisarQuestoes/diagnostico`, {
+        const analisarquestao = await fetch(`https://api.aprendacomeduke.com.br/api/analisarQuestoes/diagnostico`, {
             method: 'POST',
             body: JSON.stringify({ dados, config, id, resposta, segundos}),
             headers: {

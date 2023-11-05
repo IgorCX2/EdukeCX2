@@ -6,7 +6,7 @@ import TelaCarregando from "@/components/carregando/telacarregando";
 import { useRouter } from 'next/navigation'
 async function postNovaSenha(cod, senha) {
     try {
-        const apiNovaSenha = await fetch('http://localhost:8080/api/contaRegistro/nova-senha', {
+        const apiNovaSenha = await fetch('https://api.aprendacomeduke.com.br/api/contaRegistro/nova-senha', {
             method: 'POST',
             body: JSON.stringify({cod: cod, senha: senha}),
             headers: { 'Content-Type': 'application/json', }

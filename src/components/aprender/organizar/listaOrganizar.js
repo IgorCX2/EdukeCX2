@@ -6,7 +6,7 @@ import MontarBlocoPlano from "./montarbloco";
 import TelaCarregando from '@/components/carregando/telacarregando';
 async function postNovoPlano(plano, id){
     try{
-        const apiCadastro = await fetch('http://localhost:8080/api/usuariosInfos/salva-plano', {
+        const apiCadastro = await fetch('https://api.aprendacomeduke.com.br/api/usuariosInfos/salva-plano', {
             method: 'POST',
             body: JSON.stringify({plano, id}),
             headers: { 'Content-Type': 'application/json',}

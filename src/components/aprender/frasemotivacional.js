@@ -1,7 +1,7 @@
 import Image from 'next/image';
 async function getFrase(dia){
     try{
-        const frase = await fetch(`http://localhost:8080/api/frases/?data=${dia}`, {
+        const frase = await fetch(`https://api.aprendacomeduke.com.br/api/frases/?data=${dia}`, {
             cache: 'force-cache',
             method: 'GET',
             headers: { 'Content-Type': 'application/json',

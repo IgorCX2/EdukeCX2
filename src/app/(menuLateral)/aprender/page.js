@@ -10,7 +10,7 @@ const VideoIntroducao = dynamic(() => import('@/components/aprender/videointrodu
 
 async function infosPlano(id) {
     try {
-        const apiInfos = await fetch(`http://localhost:8080/api/usuariosInfos/pegar-informacoes/?id=${Number(id)}`, {
+        const apiInfos = await fetch(`https://api.aprendacomeduke.com.br/api/usuariosInfos/pegar-informacoes/?id=${Number(id)}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

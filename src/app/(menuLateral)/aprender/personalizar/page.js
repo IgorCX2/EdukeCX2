@@ -5,7 +5,7 @@ var jwt = require('jsonwebtoken');
 const { promisify } = require('util');
 async function infosPlano(id) {
     try {
-        const apiInfos = await fetch(`http://localhost:8080/api/usuariosInfos/pegar-informacoes/?id=${Number(id)}`, {
+        const apiInfos = await fetch(`https://api.aprendacomeduke.com.br/api/usuariosInfos/pegar-informacoes/?id=${Number(id)}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -19,7 +19,7 @@ async function infosPlano(id) {
 }
 async function pegarPlano() {
     try {
-        const apiInfos = await fetch(`http://localhost:8080/api/estudar/get-planoALL`, {
+        const apiInfos = await fetch(`https://api.aprendacomeduke.com.br/api/estudar/get-planoALL`, {
             method: 'GET',
             cache: 'force-cache',
             headers: {

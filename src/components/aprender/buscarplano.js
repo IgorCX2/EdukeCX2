@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from "next/link";
 async function postPlano(id,tipo){
     try{
-        const apiPlano = await fetch(`http://localhost:8080/api/estudar/get-infos/?id=${id}&tipo=${tipo} `, {
+        const apiPlano = await fetch(`https://api.aprendacomeduke.com.br/api/estudar/get-infos/?id=${id}&tipo=${tipo} `, {
             cache: 'force-cache',
             method: 'GET',
             headers: { 'Content-Type': 'application/json',

@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import Btn from "../Botoes/btn";
 async function cadastrarNivel(id, nivel){
     try{
-        const salvalNivel = await fetch(`http://localhost:8080/api/usuariosInfos/cad-nivel`, {
+        const salvalNivel = await fetch(`https://api.aprendacomeduke.com.br/api/usuariosInfos/cad-nivel`, {
             method: 'POST',
             body: JSON.stringify({form: nivel, id: id}),
             headers: { 'Content-Type': 'application/json',

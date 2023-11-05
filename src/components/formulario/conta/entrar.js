@@ -9,7 +9,7 @@ import { cookieAction } from "src/app/action";
 import TelaCarregando from "@/components/carregando/telacarregando";
 async function postEntrar(formCadastro) {
     try {
-        const apiEntrar = await fetch('http://localhost:8080/api/contaRegistro/entrar', {
+        const apiEntrar = await fetch('https://api.aprendacomeduke.com.br/api/contaRegistro/entrar', {
             method: 'POST',
             body: JSON.stringify({ form: formCadastro }),
             headers: { 'Content-Type': 'application/json', }

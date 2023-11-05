@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Btn from '../Botoes/btn';
 async function mudarStatus(id){
   try{
-      const mudandoStatus = await fetch('http://localhost:8080/api/usuariosInfos/mudar-status', {
+      const mudandoStatus = await fetch('https://api.aprendacomeduke.com.br/api/usuariosInfos/mudar-status', {
           method: 'POST',
           body: JSON.stringify({id: id}),
           headers: { 'Content-Type': 'application/json',

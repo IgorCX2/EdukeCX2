@@ -6,7 +6,7 @@ import BarraProgresso from "./barraprogresso";
 import FinalizarAvaliacao from './telafinalizaravaliacao';
 async function getQuestao(idQuestao) {
     try {
-        const analisarquestao = await fetch(`http://localhost:8080/api/questoes/get-questao/?idQuestao=${idQuestao}`, {
+        const analisarquestao = await fetch(`https://api.aprendacomeduke.com.br/api/questoes/get-questao/?idQuestao=${idQuestao}`, {
             cache: 'force-cache',
             method: 'GET',
             headers: {

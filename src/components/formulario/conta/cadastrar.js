@@ -7,7 +7,7 @@ import TelaCarregando from "@/components/carregando/telacarregando";
 import { useRouter } from 'next/navigation'
 async function postCadastro(formCadastro){
     try{
-        const apiCadastro = await fetch('http://localhost:8080/api/contaRegistro/cadastrar', {
+        const apiCadastro = await fetch('https://api.aprendacomeduke.com.br/api/contaRegistro/cadastrar', {
             method: 'POST',
             body: JSON.stringify({form: formCadastro}),
             headers: { 'Content-Type': 'application/json',}

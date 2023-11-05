@@ -5,7 +5,7 @@ import { cookieAction } from 'src/app/action';
 import TelaCarregando from "@/components/carregando/telacarregando";
 async function postValidarLogin(formValidar, id) {
     try {
-        const apiValidarLogin = await fetch('http://localhost:8080/api/contaRegistro/validar', {
+        const apiValidarLogin = await fetch('https://api.aprendacomeduke.com.br/api/contaRegistro/validar', {
             method: 'POST',
             body: JSON.stringify({ form: formValidar, id: id }),
             headers: { 'Content-Type': 'application/json', }

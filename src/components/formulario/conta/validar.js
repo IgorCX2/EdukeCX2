@@ -6,7 +6,7 @@ import TelaCarregando from "@/components/carregando/telacarregando";
 
 async function ValidarEmail(formCadastro) {
     try {
-        const apiValidarEmail = await fetch('http://localhost:8080/api/contaRegistro/recuperar-senha', {
+        const apiValidarEmail = await fetch('https://api.aprendacomeduke.com.br/api/contaRegistro/recuperar-senha', {
             method: 'POST',
             body: JSON.stringify({ form: formCadastro }),
             headers: { 'Content-Type': 'application/json', }

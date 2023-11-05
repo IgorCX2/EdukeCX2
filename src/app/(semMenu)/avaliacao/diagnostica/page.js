@@ -4,7 +4,7 @@ import { cookieAction } from "src/app/action";
 import PaginaDiagnostica from "src/interface/avaliacao/paginadiagnostica";
 async function getDiagnostico(id){
     try{
-        const questaoDiagnostica = await fetch(`http://localhost:8080/api/selecionarQuestoes/diagnostico`,{
+        const questaoDiagnostica = await fetch(`https://api.aprendacomeduke.com.br/api/selecionarQuestoes/diagnostico`,{
             method: 'POST',
             body: JSON.stringify({id}),
             headers: { 'Content-Type': 'application/json',
