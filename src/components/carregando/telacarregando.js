@@ -1,7 +1,5 @@
 import Image from 'next/image';
-const imageLoader = ({ src, width, quality }) => {
-    return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`
-}
+
 export default function TelaCarregando({imageLoader}){
     const mensagem = ["Você sabia que o criador deste site tinha apenas 18 anos?", "A ideia do site surgiu em 22/02/2022, no meu aniversario =)", "o mascote do site foi uma referência ao jogo Minecraft"]
     return(

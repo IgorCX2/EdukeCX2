@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 const imageLoader = ({ src, width, quality }) => {
-    return `/${src}?w=${width}&q=${quality || 75}`
+    return `https://aprendacomeduke.com.br${src}?w=${width}&q=${quality || 75}`
 }
 export default function LogoEduke({ imageLoader }) {
     return (
