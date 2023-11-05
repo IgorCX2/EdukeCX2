@@ -15,7 +15,6 @@ async function postPlano(id,tipo){
 }
 export default async function BuscarPlano({descricao, posicao, imageLoader}){
     const descricaoSepara = descricao.split('|')[0]
-    console.log(descricaoSepara)
     var pegarPlano
     if(descricaoSepara[0] == 'R' || descricaoSepara[0] == 'E'){
         pegarPlano = await postPlano(descricaoSepara.slice(1),'P')

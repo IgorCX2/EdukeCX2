@@ -22,6 +22,7 @@
   "homepage": "https://github.com/IgorCX2/EdukeCX2#readme",
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.4.4",
+    "gray-matter": "^4.0.3",
     "jsonwebtoken": "^9.0.2",
     "next": "^13.5.3",
     "react": "^18.2.0",

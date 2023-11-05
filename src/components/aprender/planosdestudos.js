@@ -9,7 +9,7 @@ export default async function PrincipalPlano({dados}){
     return(
         <div className="flex flex-col gap-5 mt-4">
             <div><Btn configuracao={'bg-blue-500 text-white'} link={'/aprender/personalizar'}>PERSONALIZAR</Btn></div>
-            <div className='w-full flex flex-wrap gap-8 mt-4'>
+            <div className='w-full flex flex-wrap gap-8 mt-8'>
                 {dados.infosUsuario.plano?.split(',').map(plano => {
                     contadorMaterias++
                     if (plano[0] != "A") {
@@ -20,7 +20,9 @@ export default async function PrincipalPlano({dados}){
                         )
                     }
                     return (
-                        <AvaliarBloco tipo={0} ativo={contadorMaterias}/>
+                        <div className="mt-10 w-full">
+                            <AvaliarBloco tipo={0} ativo={contadorMaterias}/>
+                        </div>
                     )
                 })}
             </div>
