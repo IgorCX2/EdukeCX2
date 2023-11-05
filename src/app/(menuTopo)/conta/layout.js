@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Suspense } from "react";
 import Container from "@/components/containers/container";
-export default async function LayoutConta({children, imageLoader}){
+export default async function LayoutConta({children}){
     return(
         <Container configuracao={'flex w-full h-screen justify-center lg:justify-evenly items-center'}>
             <main className="w-full flex">
@@ -11,7 +11,6 @@ export default async function LayoutConta({children, imageLoader}){
                 <div className='w-full flex justify-center lg:justify-evenly items-center'>
                     <section className='hidden lg:flex'>
                         <Image
-                            loader={imageLoader}
                             src="/icones/book.png"
                             alt="foto de um livro"
                             placeholder ='blur'

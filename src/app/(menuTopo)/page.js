@@ -2,7 +2,7 @@ import Image from "next/image";
 import Btn from "@/components/Botoes/btn";
 import BoxDescricao from "@/components/containers/boxDescricoes";
 import Container from "@/components/containers/container";
-export default function PaginaHome({ imageLoader,  context }) {
+export default function PaginaHome({ context }) {
     return (
         <main className="relative top-0 left-0">
             <section className="relative w-screen h-screen flex justify-center">
@@ -18,7 +18,6 @@ export default function PaginaHome({ imageLoader,  context }) {
                 </div>
                 <div>
                     <Image
-                        loader={imageLoader}
                         src={"/telaInicial/slidemain.png"}
                         alt="slide inicial do site"
                         priority
@@ -40,7 +39,6 @@ export default function PaginaHome({ imageLoader,  context }) {
                     </div>
                     <div>
                         <Image
-                            loader={imageLoader}
                             src="/ilhas/ilhas.png"
                             alt="desenho de ilhas voadoras"
                             width={380}
@@ -61,7 +59,6 @@ export default function PaginaHome({ imageLoader,  context }) {
                     </div>
                     <div>
                         <Image
-                            loader={imageLoader}
                             src="/telaInicial/pix.jpeg"
                             alt="QrCode do pix"
                             width={180}
