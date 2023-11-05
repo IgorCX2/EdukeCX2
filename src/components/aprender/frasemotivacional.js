@@ -12,7 +12,7 @@ async function getFrase(dia){
         return error
     }
 }
-export default async function FraseMotivacional({imageLoader, data, id}){
+export default async function FraseMotivacional({data, id}){
     var carregaMensagem = await getFrase(data)
     const fraseComDestinatario = carregaMensagem.bancoFrases.filter(frase => (frase.id_destinatario == id));
     if(fraseComDestinatario.length > 0){
@@ -28,7 +28,6 @@ export default async function FraseMotivacional({imageLoader, data, id}){
             </div>
             <div className='sm:flex hidden relative'>
                 <Image
-                    loader={imageLoader}
                     src={"/personagens/user.png"}
                     alt="imagem do seu personagem"
                     priority={true}

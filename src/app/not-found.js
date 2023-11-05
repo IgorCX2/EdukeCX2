@@ -1,12 +1,11 @@
 import Image from 'next/image';
 import Btn from '@/components/Botoes/btn';
-export default function NotFound({imageLoader}){
+export default function NotFound(){
     return(
         <div className="absolute top-0 left-0 h-full w-full bg-white flex items-center justify-center gap-10">
             <div className='absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-bluelight to-blue-500 '></div>
             <div>
                 <Image
-                    loader={imageLoader}
                     src="/icones/portal.png"
                     alt="ilha flutuante"
                     placeholder ='blur'

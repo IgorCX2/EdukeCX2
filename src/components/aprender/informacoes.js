@@ -1,12 +1,11 @@
 import Image from 'next/image';
 import { Suspense } from 'react';
-async function CardsStatus({situacao, imageLoader}){
+async function CardsStatus({situacao}){
     const tituloCard = ['Mando Bem', 'Preciso Melhorar']
     const imagemCard = ['coroa.png', 'hard.png']
     return(
         <div className="w-full h-40 lg:h-60 rounded-lg border-2 py-3.5 relative flex flex-col justify-center items-center text-center">
             <Image
-                loader={imageLoader}
                 src={`/icones/${imagemCard[situacao]}`}
                 alt={tituloCard[situacao]}
                 width={75}
@@ -17,7 +16,7 @@ async function CardsStatus({situacao, imageLoader}){
         </div>
     )
 }
-async function MissaoDiaria({dia, imageLoader}){
+async function MissaoDiaria({dia}){
     return(
         <div className="w-full flex flex-col gap-7">
             <h1 className="text-4xl font-bold">Missão do dia</h1>
@@ -30,7 +29,6 @@ async function MissaoDiaria({dia, imageLoader}){
                     <div className='bg-blue-500 py-1 text-white rounded-lg flex items-center justify-center gap-5'>
                         <p>100 moedas</p>
                         <Image
-                            loader={imageLoader}
                             src={`/icones/coin.png`}
                             alt={'logo das moedas'}
                             width={20}

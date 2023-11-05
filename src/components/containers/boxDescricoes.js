@@ -1,12 +1,11 @@
 import Image from "next/image"
 import Btn from "../Botoes/btn"
-export default function BoxDescricao({ imageLoader, title, text, img, style, btnlink, btnltexto, type}){
+export default function BoxDescricao({title, text, img, style, btnlink, btnltexto, type}){
     return(
         <div className={`${style} flex flex-col justify-between rounded-lg`}>
             <div className={`${type ? 'items-center' : undefined} flex flex-col gap-2`}>
                 <div>
                     <Image
-                        loader={imageLoader}
                         src={`${img}`}
                         alt={`logo do produto ${title}`}
                         width={type ? 80 : 40}

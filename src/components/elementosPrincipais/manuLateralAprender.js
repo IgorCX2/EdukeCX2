@@ -1,11 +1,10 @@
 import Image from 'next/image';
-export default function MenuAprender({imageLoader}) {
+export default function MenuAprender() {
     return (
         <aside className='lg:flex hidden w-3/12 flex gap-12 flex-col'>
             <div className='w-full flex flex-col gap-5'>
                 <div className="w-full rounded-lg py-10 px-3 xl:px-7 bg-[#191022] relative flex flex-col justify-center items-center text-white">
                     <Image
-                        loader={imageLoader}
                         src={"/logos/logovip.png"}
                         alt="logo de vip"
                         width={100}

@@ -4,7 +4,7 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 import { useState } from 'react';
 import { usarConteudoQuestao } from 'src/contexts/questaoDiagnostica';
 
-export default function BoasVindasAvaliacao({nome, imageLoader}){
+export default function BoasVindasAvaliacao({nome}){
     const paramsLink = useSelectedLayoutSegment()
     const [telaAtiva, setTelaAtiva] = useState(true)
     const { setTemporizador } = usarConteudoQuestao()
@@ -33,7 +33,6 @@ export default function BoasVindasAvaliacao({nome, imageLoader}){
                     <div className="flex justify-center w-full my-20">
                         <div className="bg-blue-500/10 py-10 px-5 rounded-full">
                             <Image
-                            loader={imageLoader}
                             src={"/personagens/user.png"}
                             alt="imagem do seu personagem"
                             priority={true}

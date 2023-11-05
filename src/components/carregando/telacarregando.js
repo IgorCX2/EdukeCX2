@@ -1,13 +1,12 @@
 import Image from 'next/image';
 
-export default function TelaCarregando({imageLoader}){
+export default function TelaCarregando(){
     const mensagem = ["Você sabia que o criador deste site tinha apenas 18 anos?", "A ideia do site surgiu em 22/02/2022, no meu aniversario =)", "o mascote do site foi uma referência ao jogo Minecraft"]
     return(
         <div className='absolute top-0 left-0 h-screen w-full z-40 bg-white flex flex-col items-center justify-center gap-8'>
             <div className='relative'>
                 <div>
                     <Image
-                        loader={imageLoader}
                         src="/carregando/ilhascarregamento.svg"
                         alt="ilha flutuante"
                         placeholder ='blur'
@@ -19,7 +18,6 @@ export default function TelaCarregando({imageLoader}){
                 <div className='absolute bottom-24 left-14'>
                     <div className='animate-bounce'>
                         <Image
-                            loader={imageLoader}
                             src="/carregando/skin.png"
                             alt="mascote do site"
                             placeholder ='blur'

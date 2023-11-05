@@ -1,12 +1,11 @@
 import Link from "next/link";
 import Image from 'next/image';
-export default function AvaliarBloco({tipo, imageLoader, ativo}){
+export default function AvaliarBloco({tipo, ativo}){
     return(
         <Link href={tipo == 1 ? '/avaliacao/diagnostica' : ativo == 0 ? '/avaliacao/desafio' : '/aprender'} className='w-full'>
             <div className="flex relative">
                 <div className="z-20 -mt-10">
                     <Image
-                        loader={imageLoader}
                         src={"/personagens/bosscompleto.png"}
                         alt="chefão do mundo estudo"
                         priority={true}

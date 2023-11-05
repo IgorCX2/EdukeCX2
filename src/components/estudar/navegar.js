@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-export default function NavegarEstudo({ paginas, titulo, id, imageLoader}) {
+export default function NavegarEstudo({ paginas, titulo, id, }) {
     var contarPaginas = -1
     paginas = paginas.split(',')
     titulo = titulo.split(',')
@@ -14,7 +14,7 @@ export default function NavegarEstudo({ paginas, titulo, id, imageLoader}) {
                     <Link key={titulo[contarPaginas]?.toString()} href={"#" + titulo[contarPaginas]?.toString()}>
                         <div className={`flex gap-5 items-center border-b-2 py-6 ${tipo > 2 && 'px-6'}`}>
                             <div>
-                                <Image loader={imageLoader} src="/icones/booknotsmoke.png" alt="Picture of the author" width={40} height={40}/>
+                                <Image src="/icones/booknotsmoke.png" alt="Picture of the author" width={40} height={40}/>
                             </div>
                             <div className="flex flex-col">
                                 <strong className='text-xl'>{titulo[contarPaginas]}</strong>
