@@ -1,9 +1,12 @@
+import dynamic from 'next/dynamic'
 import { getContents } from "script/getContent"
 import markdownStyles from '../../../../../markdown-styles.module.css'
 import markdownToHtml from "script/markdownToHtml"
 import NavegarEstudo from "@/components/estudar/navegar"
 import Container from "@/components/containers/container"
 import MudarConteudo from "@/components/estudar/mudarConteudo"
+import Video from '@/components/estudar/video'
+import QuestaoEstudae from '@/components/estudar/questaoEstudo'
 export default async function EstudarTela({ params }){
     const coresTo = ["to-rose-800", "to-blue-800", "to-orange-800", "to-yellow-800", "to-emerald-800", "to-lime-800", "to-teal-800", "to-violet-800", "to-pink-800", "to-fuchsia-800", "to-sky-800"]
     const coresFrom = ["from-rose-500", "from-blue-500", "from-orange-500", "from-yellow-500", "from-emerald-500", "from-lime-500", "from-teal-500", "from-violet-500", "from-pink-500", "from-fuchsia-500", "from-sky-500"]
@@ -23,16 +26,27 @@ export default async function EstudarTela({ params }){
             </aside>
             <Container configuracao={'flex justify-center'}>
                 <main className="w-4/5 flex flex-col items-center justify-end overflow-hidden">
-                    <section className='h-screen w-full mt-10'>
+                    <section className='h-screen w-full'>
                         <div className='relative w-full h-full overflow-y-scroll notScroll' id="introdução">
-                            <h1 className={`text-center font-extrabold uppercase text-transparent text-6xl bg-clip-text bg-gradient-to-r ${coresFrom[carregarArquivo.metaData.materia]} ${coresTo[carregarArquivo.metaData.materia]} `}>{carregarArquivo.metaData.titulo}</h1>
+                            <h1 className={`text-center mt-16 font-extrabold uppercase text-transparent text-6xl bg-clip-text bg-gradient-to-r ${coresFrom[carregarArquivo.metaData.materia]} ${coresTo[carregarArquivo.metaData.materia]} `}>{carregarArquivo.metaData.titulo}</h1>
                             <div className={`${markdownStyles['markdown']} mt-10`} dangerouslySetInnerHTML={{ __html:carregarArquivo.conteudo.split('£')[0]}}/>
                             <MudarConteudo meuConteudos={planoCodigo[1].split(',')} materia={carregarArquivo.metaData.materia} conteudo={carregarArquivo.metaData.conteudoTexto.split(',')} cod_conteudo={carregarArquivo.metaData.conteudo.split(',')}/>
+                        </div>
+                        <div className='relative w-full h-full overflow-y-scroll notScroll' id="texto">
+                            <Video src="qAVuGVa9O_c"/>
+                        </div>
+                        <div className='relative w-full h-full overflow-y-scroll notScroll' id="video">
+                            <Video src="xgPYY1GiKyY"/>
+                        </div>
+                        <div className='relative w-full h-full overflow-y-scroll notScroll' id="video">
+                            <Video src="xgPYY1GiKyY"/>
+                        </div>
+                        <div className='relative w-full h-full overflow-y-scroll notScroll' id="questao">
+                            <QuestaoEstudae id={31}/>
                         </div>
                     </section>
                 </main>
             </Container>
-
         </div>
 
     )

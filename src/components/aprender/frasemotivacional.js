@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { cookieAction } from 'src/app/action';
 async function getFrase(dia){
     try{
         const frase = await fetch(`https://api.aprendacomeduke.com.br/api/frases/?data=${dia}`, {
@@ -12,9 +13,10 @@ async function getFrase(dia){
         return error
     }
 }
-export default async function FraseMotivacional({data, id}){
+export default async function FraseMotivacional({data, }){
+    const pegarCookieLogin = await cookieAction('consultar', 'UserToken')
     var carregaMensagem = await getFrase(data)
-    const fraseComDestinatario = carregaMensagem.bancoFrases.filter(frase => (frase.id_destinatario == id));
+    const fraseComDestinatario = carregaMensagem.bancoFrases.filter(frase => (frase.id_destinatario == pegarCookieLogin.id));
     if(fraseComDestinatario.length > 0){
         carregaMensagem = fraseComDestinatario[Math.floor(Math.random() * fraseComDestinatario.length)]
     }

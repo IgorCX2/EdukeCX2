@@ -2,12 +2,12 @@ import Image from "next/image";
 import Btn from "@/components/Botoes/btn";
 import BoxDescricao from "@/components/containers/boxDescricoes";
 import Container from "@/components/containers/container";
-export default function PaginaHome({ context }) {
+export default function PaginaHome() {
     return (
         <main className="relative top-0 left-0">
             <section className="relative w-screen h-screen flex justify-center">
                 <div className="absolute w-full h-full left-0 flex justify-center z-10 bg-gradient-to-b from-black/30 from-10% to-black/25 to-20% backdrop-blur-[1px]">
-                    <div className="flex flex-col items-center max-w-4xl w-full justify-center gap-8 text-center text-white p-10 md:p-5 lg:p-0">
+                    <div className="flex flex-col items-center max-w-4xl w-full justify-center gap-8 text-center text-white p-10 md:p-5 lg:p-0 lg:mt-0 mt-10">
                         <h1 className="font-black text-5xl md:text-6xl">VOCÊ ESTÁ NO LUGAR CERTO PARA APRENDER! [BETA]</h1>
                         <h2 className="font-medium text-lg">A nossa plataforma de estudos identifica os pontos fortes e fracos de cada pessoa, traçando um plano de estudos personalizado e eficiente para alcançar o seu sucesso. Junte-se a nós e maximize seu potencial!</h2>
                         <div className="flex gap-12 mt-2">
@@ -16,7 +16,7 @@ export default function PaginaHome({ context }) {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="fixed w-screen h-screen">
                     <Image
                         src={"https://imgs.aprendacomeduke.com.br/telaInicial/slidemain.png"}
                         alt="slide inicial do site"
@@ -28,8 +28,8 @@ export default function PaginaHome({ context }) {
                     />
                 </div>
             </section>
-            <section className="relative w-full">
-                <Container configuracao={'justify-center lg:justify-between flex gap-12 flex-row-reverse items-center flex-wrap mt-24'}>
+            <section className="relative w-full bg-white py-16">
+                <Container configuracao={'justify-center lg:justify-between flex gap-12 flex-row-reverse items-center flex-wrap '}>
                     <div className="max-w-md xl:max-w-xl 2xl:max-w-3xl w-full">
                         <h1 className="font-black text-4xl md:text-5xl">CONHEÇA O NOSSO MÉTODO</h1>
                         <h2 className="mt-6">Pensando em estudantes de todas as idades, Nossa plataforma revolucionária de estudos utiliza tecnologia avançada para identificar pontos fortes e fracos de cada aluno. Com base nessas informações, traçamos um plano de estudos personalizado e eficiente, para assim, poder passar por todos os seus obstáculos. Acreditamos que para evoluir é necessario pratica, treinos, e não somente escutar e escrever, com isso, iremos proporcionar um ensino totalmente personalizado para você. Junte-se a nós e transforme seu aprendizado!</h2>
@@ -48,8 +48,8 @@ export default function PaginaHome({ context }) {
                     </div>
                 </Container>
             </section>
-            <section className="relative w-full bg-gray-200">
-                <Container configuracao={'justify-center lg:justify-between flex gap-12 flex-row-reverse items-center flex-wrap py-5 mt-24'}>
+            <section className="relative w-full bg-gray-200 py-5">
+                <Container configuracao={'justify-center lg:justify-between flex gap-12 flex-row-reverse items-center flex-wrap'}>
                     <div className="flex flex-col max-w-md xl:max-w-xl 2xl:max-w-3xl w-full">
                         <h1 className="font-black text-4xl md:text-5xl">NOS AJUDE A TE AJUDAR =)</h1>
                         <p className="mt-6">Somos uma empresa idependende, entretando, temos muitos gastos para manter esta plataforma no ar e de forma gratuita para muitos. Com isso, pedimos humildemente que nos ajude com qualquer valor, para conseguirmos manter a plataforma no ar com extrema qualidade.</p>
@@ -68,8 +68,8 @@ export default function PaginaHome({ context }) {
                     </div>
                 </Container>
             </section>
-            <section className="relative w-full">
-                <Container configuracao={'justify-center lg:justify-between flex gap-12 flex-row-reverse items-center flex-wrap mt-24'}>
+            <section className="relative w-full bg-white pt-24 pb-32">
+                <Container configuracao={'justify-center lg:justify-between flex gap-12 flex-row-reverse items-center flex-wrap '}>
                     <div className="w-full flex-col items-center">
                         <h1 className="font-black text-4xl md:text-5xl text-center">NOSSOS PLANOS</h1>
                         <div className="flex justify-center md:justify-between mt-12 md:mt-40 gap-5 md:gap-0 w-full flex-wrap">
@@ -81,8 +81,8 @@ export default function PaginaHome({ context }) {
                     </div>
                 </Container>
             </section>
-            <section className="relative w-full">
-                <Container configuracao={'justify-center lg:justify-end 2xl:justify-between flex gap-12 items-center flex-wrap mt-40'}>
+            <section className="relative w-full bg-white pb-40">
+                <Container configuracao={'justify-center lg:justify-end 2xl:justify-between flex gap-12 items-center flex-wrap '}>
                     <h1 className="max-w-md w-full font-black text-4xl md:text-5xl text-center">Informações da Nossa Plataforma</h1>
                     <div className="bg-blue-500 md:w-auto w-full flex-wrap flex justify-between gap-16 rounded-l-xl px-10 py-8 text-white">
                         <div className="items-center flex flex-col gap-3">
@@ -104,8 +104,8 @@ export default function PaginaHome({ context }) {
                     </div>
                 </Container>
             </section>
-            <section className="relative w-full mt-40 bg-gray-200 ">
-                <Container configuracao={'justify-center lg:justify-end 2xl:justify-between flex gap-12 items-center flex-wrap py-10'}>
+            <section className="relative w-full py-10 bg-gray-200 ">
+                <Container configuracao={'justify-center lg:justify-end 2xl:justify-between flex gap-12 items-center flex-wrap '}>
                     <div className='w-full flex gap-5 lg:flex-nowrap flex-wrap'>
                         <div className='w-full lg:w-1/2'>
                             <h1 className="font-black text-4xl">VOCÊ ESTÁ NO LUGAR CERTO PARA APRENDER! !</h1>

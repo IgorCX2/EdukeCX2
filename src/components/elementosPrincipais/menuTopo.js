@@ -31,21 +31,21 @@ export default function MenuTopo() {
                             </div>
                         </div>
                         <nav>
-                            <ul className="flex flex-col gap-5 lg:gap-10 lg:flex-row">
+                        <ul className="flex flex-col gap-5 lg:gap-10 lg:flex-row">
                                 <li>
                                     <Link href={'/aprender'}>Aprender</Link>
                                 </li>
                                 <li>
-                                    <Link href={'/'}>Professores</Link>
+                                    <Link href={'/'} className={`${paramsLink == undefined && 'font-medium'}`}>Professores</Link>
                                 </li>
                                 <li>
-                                    <Link href={'/'}>Missão</Link>
+                                    <Link href={'/'} className={`${paramsLink == undefined && 'font-medium'}`}>Missão</Link>
                                 </li>
                                 <li>
-                                    <Link href={'/'}>Entre em Contato</Link>
+                                    <Link href={'/'} className={`${paramsLink == undefined && 'font-medium'}`}>Entre em Contato</Link>
                                 </li>
                                 <li>
-                                    <Link href={'/'}>Nossa Empresa</Link>
+                                    <Link href={'/'} className={`${paramsLink == undefined && 'font-medium'}`}>Nossa Empresa</Link>
                                 </li>
                             </ul>
                         </nav>

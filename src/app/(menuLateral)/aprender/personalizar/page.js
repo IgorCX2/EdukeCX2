@@ -34,15 +34,12 @@ async function pegarPlano() {
 }
 export default async function PersonalizarEstudo(){
     const pegarCookieLogin = await cookieAction('consultar', 'UserToken')
-    var decode = await promisify(jwt.verify)(pegarCookieLogin.value, "OD2DS8S21DSA4SD4SS3A");
-    const resonseEnv = await infosPlano(decode.id)
+    const resonseEnv = await infosPlano(pegarCookieLogin.id)
     const todosPlanos = await pegarPlano()
     return(
         <section className='w-full'>
             <h1 className={`text-4xl font-bold mb-7`}>Personalizar Meu Plano</h1>
-            <Suspense fallback={'teste'}>
-                <ListaOrganizar data={resonseEnv.infosUsuario.plano.split(',')} planos={todosPlanos} id={decode.id}/>
-            </Suspense>
+            <ListaOrganizar data={resonseEnv.infosUsuario.plano.split(',')} planos={todosPlanos} id={pegarCookieLogin.id}/>
         </section>
     )
 }

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Btn from '@/components/Botoes/btn';
-export default function NotFound(){
+export default function SairConta(){
     return(
         <main className="absolute top-0 left-0 h-full w-full bg-white flex items-center justify-center gap-10">
             <div className='absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-bluelight to-blue-500 '/>
@@ -15,14 +15,14 @@ export default function NotFound(){
                 />
             </section>
             <section className='max-w-lg -mt-5'>
-                <h1 className='font-black text-gray-400 text-8xl'>ERRO 404</h1>
-                <p className='mt-5'>Parece que você se perdeu em um mundo desconhecido. Mas não se preocupe, há uma maneira de voltar para o mundo normal. Há um portal próximo que pode levá-lo de volta ao lugar conhecido e seguro. Embora possa ser tentador explorar este novo mundo, a segurança e a estabilidade do mundo conhecido são importantes. </p>
+                <h1 className='font-black text-gray-400 text-8xl'>SAIDA CONCLUÍDA</h1>
+                <p className='mt-5'>Você fez um ótimo trabalho! Sua conta foi desconectada com sucesso. Agradecemos por escolher nossos serviços para sua jornada de estudos personalizados. Lembre-se, o conhecimento é uma jornada contínua. Se desejar retornar ao seu mundo de estudos personalizados, sinta-se à vontade para se reconectar a qualquer momento.Até breve! E lembre-se, a busca pelo conhecimento nunca termina.</p>
                 <div className='relative mt-10'>
-                    <Btn configuracao={'bg-gradient-to-r from-bluelight to-blue-500 text-white hover:from-blue-500 hover:to-blue-500'} link={'/'}>
-                        VOLTAR AO MUNDO NORMAL
+                    <Btn configuracao={'bg-gradient-to-r from-bluelight to-blue-500 text-white hover:from-blue-500 hover:to-blue-500'} link={'/conta/entrar'}>
+                        ENTRAR
                     </Btn>
                 </div>
             </section>
         </main>
     )
-} 
+}

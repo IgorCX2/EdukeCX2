@@ -7,6 +7,8 @@ import LogoEduke from './menuLogo';
 import { Suspense, useState } from "react";
 import BoxCarregando from "@/components/carregando/boxcarregando";
 import Xp from "../jogo/xp";
+import Usuario from "./usuario/usuario";
+import { cookieAction } from "src/app/action";
 
 export default function MenuLateral({nome, skin, id}){
     const paramsLink = useSelectedLayoutSegment();
@@ -37,11 +39,7 @@ export default function MenuLateral({nome, skin, id}){
                             </div>
                         </div>
                         <div  className='flex flex-col items-center'>
-                            <Suspense fallback={<BoxCarregando tamanhos={'h-20 w-20 rounded-full'}/>}>
-                                <Link href={`/perfil/${id}`}>
-                                    <h1 className='text-3xl font-bold'>{nome}</h1>
-                                </Link>
-                            </Suspense>
+                            <Usuario/>
                         </div>
                     </div>
                     <nav className='mt-10 mb-10'>
@@ -56,7 +54,7 @@ export default function MenuLateral({nome, skin, id}){
                         </ul>
                     </nav>
                     <div>
-                        <button className='font-bold px-5'>Sair da Conta</button>
+                        <button className='font-bold px-5' onClick={() => cookieAction('delete', 'UserToken')}>Sair da Conta</button>
                     </div>   
                 </div>
             </aside>
